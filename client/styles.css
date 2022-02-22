@@ -32,7 +32,7 @@
 }
 
 .tiles .tile-red {
-  background-color: #FF0000;
+  background-color: rgba(255, 0, 0, 0.589);
   height: 3rem;
   border: 2px solid #3A3A3C;
   font-size: 2rem;
@@ -40,7 +40,7 @@
 }
 
 .tiles .tile-yellow {
-  background-color: #FFD700;
+  background-color: rgba(255, 215, 0, 0.589);
   height: 3rem;
   border: 2px solid #3A3A3C;
   font-size: 2rem;
@@ -48,7 +48,7 @@
 }
 
 .tiles .tile-correct {
-  background-color: #00FF00;
+  background-color: rgba(0, 255, 0, 0.589);
   height: 3rem;
   border: 2px solid #3A3A3C;
   font-size: 2rem;

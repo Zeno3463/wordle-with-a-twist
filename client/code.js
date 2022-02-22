@@ -16,17 +16,18 @@ const updateWord = () => {
 }
 
 const submitWord = () => {
-	for (let i = 0; i < word.length; i++) {
-		if (word[i] === answer[i]) $(`.tile:eq(${i})`).addClass('tile-correct');
-		else if (listOfAlphabets.indexOf(word[i]) < listOfAlphabets.indexOf(answer[i])) $(`.tile:eq(${i})`).addClass('tile-yellow');
-		else $(`.tile:eq(${i})`).addClass('tile-red');
-	}
-	$(`.tile:eq(0)`).removeClass('tile');
-	$(`.tile:eq(1)`).removeClass('tile');
-	$(`.tile:eq(2)`).removeClass('tile');
-	$(`.tile:eq(3)`).removeClass('tile');
-	$(`.tile:eq(4)`).removeClass('tile');
-	word = "";
+	$.getJSON("dictionary.json", (dictionary) => {
+		if (!dictionary.includes(word.toLowerCase())) alert("That's not a word!");
+		else {
+			for (let i = 0; i < word.length; i++) {
+				if (word[i] === answer[i]) $(`.tile:eq(0)`).addClass('tile-correct');
+				else if (listOfAlphabets.indexOf(word[i]) < listOfAlphabets.indexOf(answer[i])) $(`.tile:eq(0)`).addClass('tile-yellow');
+				else $(`.tile:eq(0)`).addClass('tile-red');
+				$(`.tile:eq(0)`).removeClass('tile');
+			}
+			word = "";
+		}
+	});
 }
 
 const removeWord = () => {
