@@ -65,13 +65,16 @@ const handleInput = (e) => {
 	}
 }
 
-$('body').keyup((e) => handleInput(e.key));
-
-$('.key').each((_, obj) => $(obj).click(() => handleInput($(obj).text())))
-
-$(async () => {
+const newGame = async () => {
 	await fetch("http://localhost:3000/rand").then(res => res.json()).then(res => {
 		console.log(res)
 		answer = res[0];
 	})
-});
+}
+
+$('body').keyup((e) => handleInput(e.key));
+
+$('.key').each((_, obj) => $(obj).click(() => handleInput($(obj).text())))
+
+// start a new game on load
+$(() => newGame());
