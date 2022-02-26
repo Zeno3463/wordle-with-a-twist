@@ -17,13 +17,39 @@
 			<p>
 				Guess the word in <strong>12</strong> tries. <br><br>
 				Each guess must be a valid <strong>four-letter</strong> word. Hit the enter button to submit. <br><br>
-				Unlike the original wordle, this version of worlde validates your answer by telling you if the answer is <strong>alphabetically</strong> before or after your guess. <br><br>
-				<h3>Examples</h3>
+				Unlike the original wordle, this version of worlde validates your guess by telling you if the actual answer is <strong>alphabetically</strong> before or after your guess. <br><br>
+				<h3>Example</h3>
+				<div class="tiles-container">
+					<div class="tiles">
+						<div class="row">
+							<div class="tile-display tile-correct">C</div>
+							<div class="tile-display tile-red">L</div>
+							<div class="tile-display tile-yellow">A</div>
+							<div class="tile-display tile-red">W</div>
+						</div>
+						<div class="row">
+							<div class="tile-display tile-correct">C</div>
+							<div class="tile-display tile-correct">A</div>
+							<div class="tile-display tile-correct">T</div>
+							<div class="tile-display tile-correct">S</div>
+						</div>
+					</div>
+				</div>
+				The answer is <strong>CATS</strong>, and the guess is <strong>CLAW</strong>. <br><br>
+				Since <strong>C</strong> is the correct alphabet, <strong>C</strong> is shaded <strong>green</strong>. <br><br>
+				Since <strong>L</strong> is alphabetically after <strong>A</strong>, <strong>L</strong> is shaded <strong>red</strong>. <br><br>
+				Since <strong>A</strong> is alphabetically before <strong>T</strong>, <strong>A</strong> is shaded <strong>yellow</strong>. <br><br>
+				Since <strong>W</strong> is alphabetically after <strong>S</strong>, <strong>W</strong> is shaded <strong>red</strong>. <br><br>
+				<button class="close-tutorial">X</button>
 			</p>
 		</div>
 	</div>
 	<div class="nav-bar">
 		<h1 class="heading">Wordle With A Twist</h1>
+		<div>
+			<button class="show-tutorial">tutorial</button>
+			<button class="new-game">new game</button>
+		</div>
 	</div>
 	<div class="tiles-container">
 		<div class="tiles">

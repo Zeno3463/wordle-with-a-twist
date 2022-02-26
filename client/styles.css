@@ -9,10 +9,32 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-bottom: 1px solid #3A3A3C;
+}
+
+.nav-bar div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-bar div button {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-bar div button:hover {
+  color: #3A3A3C;
 }
 
 .heading {
@@ -21,6 +43,7 @@
 }
 
 .tutorial {
+  opacity: 0.95;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -37,6 +60,21 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
+}
+
+.tutorial .close-tutorial {
+  font-size: 2rem;
+  color: white;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.tutorial .close-tutorial:hover {
+  color: #3A3A3C;
 }
 
 @media only screen and (max-width: 600px) {
@@ -72,7 +110,7 @@
   margin: 0 1rem;
 }
 
-.tiles-container .tiles .tile {
+.tiles-container .tiles .tile, .tiles-container .tiles .tile-display {
   height: 3rem;
   border: 2px solid #3A3A3C;
   font-size: 2rem;
