@@ -13,7 +13,7 @@
 </p>
 
 ## ❓ About
-Wordle With A Twist is a wordle clone with a twist in game play.
+Wordle With A Twist is a wordle clone with a twist in game play. Here's a <a href="https://wordle-with-a-twist.netlify.app/" target="_blank">demo</a> of the website.
 - Date of Creation: 19th February 2022
 - Author: Zeno
 - Version: 1.0.0
