@@ -4,7 +4,7 @@ Wordle With A Twist is a wordle clone with a twist in game play.
 
 Date of Creation: 19th February 2022
 Author: Zeno
-Version: 1.0.0
+Version: 1.0.1
 */
 
 ////// VARIABLES //////
@@ -118,8 +118,8 @@ $('.new-game').click(() => window.location.reload());
 $(async () => {
 	
 	// get a new answer on load
-	await fetch("http://localhost:3000/rand").then(res => res.json()).then(res => {
-		answer = res[0];
+	$.getJSON("dictionary.json", (dictionary) => {
+		answer = dictionary[Math.round(Math.random() * dictionary.length)];
 	})
 
 	// if this is the first time the user is playing, show the tutorial
