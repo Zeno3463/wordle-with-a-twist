@@ -90,6 +90,9 @@
     height: 30rem;
     padding-top: 7rem;
   }
+  .tutorial {
+    height: auto;
+  }
 }
 
 .tiles-container {
